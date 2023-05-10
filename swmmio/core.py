@@ -564,7 +564,6 @@ class inp(SWMMIOFile):
             # reformate the [SECTION] to section (and _section_df)
             sect_id = section.translate({ord(i): None for i in '[]'}).lower()
             sect_id_private = '_{}_df'.format(sect_id)
-            #print(sect_id_private)
             data = getattr(self, sect_id_private)
             if data is not None:
                 replace_inp_section(target_path, section, data)
