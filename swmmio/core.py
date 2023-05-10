@@ -473,13 +473,6 @@ class rpt(SWMMIOFile):
         return self._rpt_section_details
 
     @property
-    def external_outflow_volume(self):
-        """
-        Return the external outflow from rpt file in mm or inches
-        """
-        return float(swmmio.utils.text.get_rpt_value(self.path, "External Outflow"))
-
-    @property
     def flooding_loss_volume(self):
         """
         Return the flooding loss from rpt file in mm or inches
