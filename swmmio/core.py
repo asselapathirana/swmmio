@@ -715,16 +715,6 @@ class inp(SWMMIOFile):
             self._lid_usage_df = dataframe_from_inp(self.path, "[LID_USAGE]")
         return self._lid_usage_df
 
-    @property
-    def raingages(self):
-        """
-        Get/set RAINGAGES section of the INP file.
-        """
-        if self._raingages_df is None:
-            self._raingages_df = dataframe_from_inp(self.path, "[RAINGAGES]")
-        return self._raingages_df
-    
-
     @lid_usage.setter
     def lid_usage(self, df):
         """Set inp.lid_usage DataFrame."""
